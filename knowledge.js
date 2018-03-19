@@ -1,12 +1,14 @@
 const questions = [
-  'What kind of business would you like to invest in?',
+  'What sector would you like to invest in?',
   'How much do you have to invest in business?',
   'How long do you want to invest for?'
 ];
 
-const investmentOptions = [
-  'Treasury Bonds', 'Retirements', 'Security', 'Insurance', 'Real Estate', 'IT products and services'
+const sectors = [
+  'Retirements', 'Security', 'Insurance', 'Real Estate', 'IT products and services'
 ];
+
+const investmentOptions = ['Treasury bonds', ];
 
 const lengthInYears = {
   'Six months': 6,
@@ -19,8 +21,8 @@ function getFeedback(feedback) {
   return feedback;
 }
 
-function guessOption(option) {
-  switch (option) {
+function guessOption(sector) {
+  switch (sector) {
     case investmentOptions[0]:
 
       break;
