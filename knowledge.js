@@ -3,6 +3,6 @@ const questions = [
   'How much do you have to invest?'
 ];
 
-const answers = [
+const options = [
   'Treasury Bonds', 'Investment Funds', 'Annunities', 'Savings for collegs', 'Retirements', 'Security', 'Insurance', 'Real Estate', 'IT products and services'
 ];
