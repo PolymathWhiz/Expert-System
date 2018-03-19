@@ -8,7 +8,7 @@ const sectors = [
   'Retirements', 'Security', 'Insurance', 'Real Estate', 'IT products and services'
 ];
 
-const investmentOptions = ['Treasury bonds', ];
+const investmentOptions = ['Treasury bonds', 'Peer to peer lending', 'High Interest Savings Acounts', 'Credit Card Rewards', 'Certificate of Deposit', 'Annuities', 'Treasury Inflation Protected Securities (TIPS)', 'Municipal Bonds'];
 
 const lengthInYears = {
   'Six months': 6,
