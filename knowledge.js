@@ -1,3 +1,5 @@
+var feedback = $('#feedback');
+
 var sectors = [
   'Retirements', 'Security', 'Insurance', 'Real Estate', 'IT products and services'
 ];
@@ -11,16 +13,16 @@ const lengthInYears = {
   'Ten years': 120
 };
 
-function guessOption(sector) {
+function guessOption(sector, budget, duration) {
   switch (sector) {
     case sectors[0]:
       break;
     case sectors[1]:
-      // if (budget > 1 && duration > 1) {
-      //   feedback.html('Invest in ' + investmentOptions[1]);
-      // }
-
-      feedback.html('Invest in' + investmentOptions[1]);
+      if (budget > 0 && budget < 1000) {
+        if (duration > 2) {
+          feedback.html('Invest in ' + investmentOptions[1]);
+        }
+      }
       break;
     case sectors[2]:
       break;
@@ -37,8 +39,7 @@ function guessOption(sector) {
 $('#predict').click(function () {
   var selected = $('#option').val(),
     budget = $('#budget').val(),
-    duration = $('#length').val(),
-    feedback = $('#feedback');
+    duration = $('#length').val();
 
-  guessOption(selected);
+  guessOption(selected, budget, duration);
 });
