@@ -4,7 +4,7 @@ var sectors = [
   'Retirements', 'Security', 'Insurance', 'Real Estate', 'IT products and services'
 ];
 
-const investmentOptions = ['Treasury bonds', 'Peer to peer lending', 'High Interest Savings Acounts', 'Credit Card Rewards', 'Certificate of Deposit', 'Annuities', 'Treasury Inflation Protected Securities (TIPS)', 'Municipal Bonds'];
+const investmentOptions = ['Treasury bonds', 'peer to peer lending', 'High Interest Savings Acounts', 'Credit Card Rewards', 'Certificate of Deposit', 'Annuities', 'Treasury Inflation Protected Securities (TIPS)', 'Municipal Bonds'];
 
 const lengthInYears = {
   'Six months': 6,
@@ -19,9 +19,11 @@ function guessOption(sector, budget, duration) {
       break;
     case sectors[1]:
       if (budget > 0 && budget < 1000) {
-        if (duration > 2) {
+        if (duration <= lengthInYears["Six months"]) {
           feedback.html('Invest in ' + investmentOptions[1]);
         }
+      } else {
+        feedback.html('No investment options found. Try again!');
       }
       break;
     case sectors[2]:
