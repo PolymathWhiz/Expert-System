@@ -16,6 +16,7 @@ const lengthInYears = {
 function guessOption(sector, budget, duration) {
   switch (sector) {
     case sectors[0]:
+      feedback.html('You selected ' + sectors[0]);
       break;
     case sectors[1]:
       if (budget > 0 && budget < 1000) {
@@ -27,10 +28,13 @@ function guessOption(sector, budget, duration) {
       }
       break;
     case sectors[2]:
+      feedback.html('you selected ' + sectors[2]);
       break;
     case sectors[3]:
+      feedback.html('you selected ' + sectors[3]);
       break;
     case sectors[4]:
+      feedback.html('you selected ' + sectors[4]);
       break;
     default:
       feedback.html('Invalid input');

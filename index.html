@@ -28,6 +28,7 @@
               What sector would you like to invest in?
             </label>
             <select class="form-control" id="option">
+              <option selected>Select option</option>
               <option value="Insurance">Insurance</option>
               <option value="Real Estate">Real Estate</option>
               <option value="Security">Security</option>
@@ -37,13 +38,13 @@
           </div>
           <div class="form-group">
             <label for="budget">What is your budget?</label>
-            <input type="number" name="budget" id="budget" class="form-control" placeholder="Insert your budget here" min="1">
+            <input type="number" name="budget" id="budget" class="form-control" placeholder="Insert your budget here" min="1" required>
           </div>
           <div class="form-group">
             <label for="length">How long will you like to invest?</label>
             <input type="number" name="length" id="length" class="form-control" placeholder="Enter duration here" min="1">
           </div>
-          <button type="submit" id="predict" class="btn btn-primary btn-block">Predict</button>
+          <button type="submit" id="predict" class="btn btn-primary btn-block">Advice Me!</button>
           <div style="margin-top: 50px;">
             <h2 id="feedback"></h2>
           </div>
