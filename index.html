@@ -37,14 +37,65 @@
             </select>
           </div>
           <div class="form-group">
+            <label for="">Why do you think you should invest in that sector</label>
+            <input type="text" id="reason" class="form-control">
+          </div>
+          <div class="form-group">
             <label for="budget">What is your budget?</label>
             <input type="number" name="budget" id="budget" class="form-control" placeholder="Insert your budget here" min="1" required>
           </div>
           <div class="form-group">
             <label for="length">How long will you like to invest?</label>
-            <input type="number" name="length" id="length" class="form-control" placeholder="Enter duration here" min="1">
+            <input type="number" name="length" id="length" class="form-control" placeholder="Duration in months" min="1">
           </div>
-          <button type="submit" id="predict" class="btn btn-primary btn-block">Advice Me!</button>
+          <div class="form-group">
+            <label for="length">What is your source of income?</label>
+            <select class="form-control" id="option">
+              <option selected>Select option</option>
+              <option value="Salary">Salary</option>
+              <option value="Business">Business</option>
+              <option value="Gift">Gift</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="length">What is your monthly earnings?</label>
+            <input type="number" name="length" id="length" class="form-control" placeholder="" min="1">
+          </div>
+          <div class="form-group">
+            <label for="length">How much do you spend on a monthly basis?</label>
+            <input type="number" name="length" id="length" class="form-control" placeholder="" min="1">
+          </div>
+          <div class="form-group">
+            <label for="length">Do you have a savings plan?</label>
+            <select class="form-control" id="option">
+              <option selected>Select option</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="length">Have you invested before?</label>
+            <select class="form-control" id="option">
+              <option selected>Select option</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="">What are your goals for investing?</label>
+            <select class="form-control" id="option">
+              <option selected>Select option</option>
+              <option value="Retirements">Retirements Benefits</option>
+              <option value="Housing">Housing</option>
+              <option value="Income">Income</option>
+              <option value="Education">Education</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="">What other investment do you have?</label>
+            <input type="text" id="reason" class="form-control">
+          </div>
+          <button type="submit" id="predict" class="btn btn-primary btn-block">Predict</button>
           <div style="margin-top: 50px;">
             <h2 id="feedback"></h2>
           </div>
