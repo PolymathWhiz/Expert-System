@@ -13,29 +13,40 @@
 
   <body>
 
-    <div class="container">
+    <div class="container" style="margin-top: 30px;">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6 offset-md-3">
           <h2>
-            Expert system to advice people on the kind of investment to make
+            An expert system to advice people on the kind of investment to make
           </h2>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-12">
-          <form action="" method="post">
-            <div class="form-group">
-              <label for="business">
-                What sector would you like to invest in?
-              </label>
-              <select class="form-control" id="exampleFormControlSelect1">
-                <option>Insurance</option>
-                <option>Real Estate</option>
-                <option>Security</option>
-                <option>IT products and services</option>
-              </select>
-            </div>
-          </form>
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-6 offset-md-3">
+          <div class="form-group">
+            <label for="option">
+              What sector would you like to invest in?
+            </label>
+            <select class="form-control" id="option">
+              <option value="Insurance">Insurance</option>
+              <option value="Real Estate">Real Estate</option>
+              <option value="Security">Security</option>
+              <option value="Retirements">Retirements</option>
+              <option value="IT products and services">IT products and services</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="budget">What is your budget?</label>
+            <input type="number" name="budget" id="budget" class="form-control" placeholder="Insert your budget here" min="1">
+          </div>
+          <div class="form-group">
+            <label for="length">How long will you like to invest?</label>
+            <input type="number" name="length" id="length" class="form-control" placeholder="Enter duration here" min="1">
+          </div>
+          <button type="submit" id="predict" class="btn btn-primary btn-block">Predict</button>
+          <div style="margin-top: 50px;">
+            <p id="feedback"></p>
+          </div>
         </div>
       </div>
     </div>
@@ -46,6 +57,7 @@
       crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"></script>
+    <script src="knowledge.js"></script>
 
   </body>
 

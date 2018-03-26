@@ -1,10 +1,4 @@
-const questions = [
-  'What sector would you like to invest in?',
-  'How much do you have to invest in business?',
-  'How long do you want to invest for?'
-];
-
-const sectors = [
+var sectors = [
   'Retirements', 'Security', 'Insurance', 'Real Estate', 'IT products and services'
 ];
 
@@ -17,14 +11,34 @@ const lengthInYears = {
   'Ten years': 120
 };
 
-function getFeedback(feedback) {
-  return feedback;
-}
-
 function guessOption(sector) {
   switch (sector) {
-    case investmentOptions[0]:
+    case sectors[0]:
+      break;
+    case sectors[1]:
+      // if (budget > 1 && duration > 1) {
+      //   feedback.html('Invest in ' + investmentOptions[1]);
+      // }
 
+      feedback.html('Invest in' + investmentOptions[1]);
+      break;
+    case sectors[2]:
+      break;
+    case sectors[3]:
+      break;
+    case sectors[4]:
+      break;
+    default:
+      feedback.html('Invalid input');
       break;
   }
 }
+
+$('#predict').click(function () {
+  var selected = $('#option').val(),
+    budget = $('#budget').val(),
+    duration = $('#length').val(),
+    feedback = $('#feedback');
+
+  guessOption(selected);
+});
