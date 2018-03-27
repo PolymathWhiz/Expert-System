@@ -50,7 +50,7 @@
           </div>
           <div class="form-group">
             <label for="length">What is your source of income?</label>
-            <select class="form-control" id="option">
+            <select class="form-control" id="incomeSource">
               <option selected>Select option</option>
               <option value="Salary">Salary</option>
               <option value="Business">Business</option>
@@ -59,15 +59,15 @@
           </div>
           <div class="form-group">
             <label for="length">What is your monthly earnings?</label>
-            <input type="number" name="length" id="length" class="form-control" placeholder="" min="1">
+            <input type="number" name="length" id="monthlyEarnings" class="form-control" placeholder="" min="1">
           </div>
           <div class="form-group">
             <label for="length">How much do you spend on a monthly basis?</label>
-            <input type="number" name="length" id="length" class="form-control" placeholder="" min="1">
+            <input type="number" name="length" id="monthlySpendings" class="form-control" placeholder="" min="1">
           </div>
           <div class="form-group">
             <label for="length">Do you have a savings plan?</label>
-            <select class="form-control" id="option">
+            <select class="form-control" id="savingsPlan">
               <option selected>Select option</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
@@ -75,15 +75,15 @@
           </div>
           <div class="form-group">
             <label for="length">Have you invested before?</label>
-            <select class="form-control" id="option">
+            <select class="form-control" id="investedStatus">
               <option selected>Select option</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="">What are your goals for investing?</label>
-            <select class="form-control" id="option">
+            <label for="goals">What are your goals for investing?</label>
+            <select class="form-control" id="goals">
               <option selected>Select option</option>
               <option value="Retirements">Retirements Benefits</option>
               <option value="Housing">Housing</option>
@@ -92,10 +92,22 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="">What other investment do you have?</label>
-            <input type="text" id="reason" class="form-control">
+              <label for="investmentPlan">Do you have another investment plan?</label>
+              <select class="form-control" id="investmentPlan" onchange="check(this)">
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+              </select>
           </div>
+            <div class="form-group" id="ifYes" style="display: none;">
+                <label for="investmentPlan">What is it?</label>
+                <input type="text" class="form-control">
+            </div>
+          <!--<div class="form-group">-->
+            <!--<label for="investments">What other investments do you have?</label>-->
+            <!--<input type="text" id="investments" class="form-control">-->
+          <!--</div>-->
           <button type="submit" id="predict" class="btn btn-primary btn-block">Predict</button>
+          <button type="reset" id="reset" class="btn btn-danger btn-block">Reset</button>
           <div style="margin-top: 50px;">
             <h2 id="feedback"></h2>
           </div>
@@ -110,6 +122,16 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"></script>
     <script src="knowledge.js"></script>
+
+    <script>
+        function check(option){
+            if (option.value == 'yes') {
+                $('#ifYes').show();
+            } else {
+                $('#ifYes').hide();
+            }
+        }
+    </script>
 
   </body>
 

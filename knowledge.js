@@ -49,3 +49,9 @@ $('#predict').click(function () {
 
   guessOption(selected, budget, duration);
 });
+
+$('#reset').click(function () {
+  // reloads the page when the
+  // reset button is clicked
+  location.reload();
+});
