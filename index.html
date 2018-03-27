@@ -28,7 +28,7 @@
               What sector would you like to invest in?
             </label>
             <select class="form-control" id="option">
-              <option selected>Select option</option>
+              <option selected disabled>Select option</option>
               <option value="Insurance">Insurance</option>
               <option value="Real Estate">Real Estate</option>
               <option value="Security">Security</option>
@@ -51,7 +51,7 @@
           <div class="form-group">
             <label for="length">What is your source of income?</label>
             <select class="form-control" id="incomeSource">
-              <option selected>Select option</option>
+              <option selected disabled>Select option</option>
               <option value="Salary">Salary</option>
               <option value="Business">Business</option>
               <option value="Gift">Gift</option>
@@ -68,7 +68,7 @@
           <div class="form-group">
             <label for="length">Do you have a savings plan?</label>
             <select class="form-control" id="savingsPlan">
-              <option selected>Select option</option>
+              <option selected disabled>Select option</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
@@ -76,7 +76,7 @@
           <div class="form-group">
             <label for="length">Have you invested before?</label>
             <select class="form-control" id="investedStatus">
-              <option selected>Select option</option>
+              <option selected disabled>Select option</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
@@ -84,7 +84,7 @@
           <div class="form-group">
             <label for="goals">What are your goals for investing?</label>
             <select class="form-control" id="goals">
-              <option selected>Select option</option>
+              <option selected disabled>Select option</option>
               <option value="Retirements">Retirements Benefits</option>
               <option value="Housing">Housing</option>
               <option value="Income">Income</option>
@@ -94,7 +94,7 @@
           <div class="form-group">
             <label for="investmentPlan">Do you have another investment plan?</label>
             <select class="form-control" id="investmentPlan" onchange="check(this)">
-              <option value="">Select an option</option>
+              <option selected disabled>Select an option</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
             </select>
@@ -103,10 +103,6 @@
             <label for="investmentPlan">What is it?</label>
             <input type="text" class="form-control">
           </div>
-          <!--<div class="form-group">-->
-          <!--<label for="investments">What other investments do you have?</label>-->
-          <!--<input type="text" id="investments" class="form-control">-->
-          <!--</div>-->
           <button type="submit" id="predict" class="btn btn-primary btn-block">Predict</button>
           <button type="reset" id="reset" class="btn btn-danger btn-block">Reset</button>
           <div style="margin-top: 50px;">

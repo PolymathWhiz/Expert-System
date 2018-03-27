@@ -4,7 +4,7 @@ var sectors = [
   'Retirements', 'Security', 'Insurance', 'Real Estate', 'IT products and services'
 ];
 
-const investmentOptions = ['Treasury bonds', 'peer to peer lending', 'High Interest Savings Acounts', 'Credit Card Rewards', 'Certificate of Deposit', 'Annuities', 'Treasury Inflation Protected Securities (TIPS)', 'Municipal Bonds'];
+const investmentOptions = ['Treasury bonds', 'peer to peer lending', 'High Interest Savings Acounts', 'Stocks', 'Certificate of Deposit', 'Annuities', 'Treasury Inflation Protected Securities (TIPS)', 'Municipal Bonds', 'Commodity Futures'];
 
 const lengthInYears = {
   'Six months': 6,
@@ -13,7 +13,7 @@ const lengthInYears = {
   'Ten years': 120
 };
 
-function guessOption(sector, budget, duration) {
+function guessOption(sector, budget, duration, amountLeft) {
   switch (sector) {
     case sectors[0]:
       feedback.html('You selected ' + sectors[0]);
@@ -42,16 +42,31 @@ function guessOption(sector, budget, duration) {
   }
 }
 
+function amountLeft(monthlyEarnings, monthlySpendings) {
+  var amountLeft = monthlyEarnings - monthlySpendings;
+
+  if (amountLeft < 1) {
+    return feedback.html(`You don't have enough money`);
+  } else return amountLeft;
+}
+
 $('#predict').click(function () {
+  // getting all values from the web
   var selected = $('#option').val(),
     budget = $('#budget').val(),
-    duration = $('#length').val();
+    duration = $('#length').val(),
+    reason = $('#reason').val(),
+    incomeSource = $('#incomeSource').val(),
+    monthlyEarnings = $('#montlyEarnings').val(),
+    monthlySpendings = $('#monthlySpendings').val(),
+    investedStatus = $('#investedStatus').val(),
+    goals = $('#goals').val(),
+    investmentPlan = $('#investmentPlan').val();
 
-  guessOption(selected, budget, duration);
+  guessOption(selected, budget, duration, amountLeft(monthlyEarnings, monthlySpendings));
+
 });
 
 $('#reset').click(function () {
-  // reloads the page when the
-  // reset button is clicked
   location.reload();
 });
