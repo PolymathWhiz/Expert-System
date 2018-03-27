@@ -92,19 +92,20 @@
             </select>
           </div>
           <div class="form-group">
-              <label for="investmentPlan">Do you have another investment plan?</label>
-              <select class="form-control" id="investmentPlan" onchange="check(this)">
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
-              </select>
+            <label for="investmentPlan">Do you have another investment plan?</label>
+            <select class="form-control" id="investmentPlan" onchange="check(this)">
+              <option value="">Select an option</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
           </div>
-            <div class="form-group" id="ifYes" style="display: none;">
-                <label for="investmentPlan">What is it?</label>
-                <input type="text" class="form-control">
-            </div>
+          <div class="form-group" id="ifYes" style="display: none;">
+            <label for="investmentPlan">What is it?</label>
+            <input type="text" class="form-control">
+          </div>
           <!--<div class="form-group">-->
-            <!--<label for="investments">What other investments do you have?</label>-->
-            <!--<input type="text" id="investments" class="form-control">-->
+          <!--<label for="investments">What other investments do you have?</label>-->
+          <!--<input type="text" id="investments" class="form-control">-->
           <!--</div>-->
           <button type="submit" id="predict" class="btn btn-primary btn-block">Predict</button>
           <button type="reset" id="reset" class="btn btn-danger btn-block">Reset</button>
@@ -124,13 +125,13 @@
     <script src="knowledge.js"></script>
 
     <script>
-        function check(option){
-            if (option.value == 'yes') {
-                $('#ifYes').show();
-            } else {
-                $('#ifYes').hide();
-            }
+      function check(option) {
+        if (option.value == 'yes') {
+          $('#ifYes').show();
+        } else {
+          $('#ifYes').hide();
         }
+      }
     </script>
 
   </body>
