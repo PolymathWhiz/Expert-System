@@ -19,45 +19,45 @@ function guessOption(sector, budget, duration, amountLeft) {
       if ((amountLeft >= 1000 && isMoneyAvaliable(budget, amountLeft))) {
         feedback.html(`You can invest in ${investmentOptions[3]}`);
       } else if ((amountLeft < 1000 && isMoneyAvaliable(budget, amountLeft))) {
-        feedback.html(`You can invest in ${investmentOptions[1]}`);
+        feedback.html(`Polybot: You can invest in ${investmentOptions[1]}`);
       } else {
-        feedback.html(`Your capital is not enough to invest in this sector`);
+        feedback.html(`Polybot: Your capital is not enough to invest in this sector`);
       }
       break;
     case sectors[1]:
       if ((amountLeft >= 1000 && isMoneyAvaliable(budget, amountLeft))) {
-        console.log('Reached here');
+        feedback.html(`Polybot: You can invest in ${investmentOptions[8]}`);
       } else if ((amountLeft < 1000 && isMoneyAvaliable(budget, amountLeft))) {
-        feedback.html(`You can invest in ${investmentOptions[1]}`);
+        feedback.html(`Polybot: You can invest in ${investmentOptions[2]}`);
       } else {
-        feedback.html('Your capital is not enough to invest in this sector');
+        feedback.html('Polybot: Your capital is not enough to invest in this sector');
       }
       break;
     case sectors[2]:
       if ((amountLeft >= 1000 && isMoneyAvaliable(budget, amountLeft))) {
-        console.log('Reached here');
+        feedback.html(`Polybot: You can invest in ${investmentOptions[4]}`);
       } else if ((amountLeft < 1000 && isMoneyAvaliable(budget, amountLeft))) {
-        feedback.html(`You can invest in ${investmentOptions[1]}`);
+        feedback.html(`Polybot: You can invest in ${investmentOptions[3]}`);
       } else {
-        feedback.html('Your capital is not enough to invest in this sector');
+        feedback.html('Polybot: Your capital is not enough to invest in this sector');
       }
       break;
     case sectors[3]:
       if ((amountLeft >= 1000 && isMoneyAvaliable(budget, amountLeft))) {
-        console.log('Reached here');
+        feedback.html(`Polybot: You can invest in ${investmentOptions[3]}`);
       } else if ((amountLeft < 1000 && isMoneyAvaliable(budget, amountLeft))) {
-        feedback.html(`You can invest in ${investmentOptions[1]}`);
+        feedback.html(`Polybot: You can invest in ${investmentOptions[4]}`);
       } else {
-        feedback.html('Your capital is not enough to invest in this sector');
+        feedback.html('Polybot: Your capital is not enough to invest in this sector');
       }
       break;
     case sectors[4]:
       if ((amountLeft >= 1000 && isMoneyAvaliable(budget, amountLeft))) {
-        console.log('Reached here');
+        feedback.html(`Polybot: You can invest in ${investmentOptions[9]}`);
       } else if ((amountLeft < 1000 && isMoneyAvaliable(budget, amountLeft))) {
-        feedback.html(`You can invest in ${investmentOptions[1]}`);
+        feedback.html(`Polybot: You can invest in ${investmentOptions[5]}`);
       } else {
-        feedback.html('Your capital is not enough to invest in this sector');
+        feedback.html('Polybot: Your capital is not enough to invest in this sector');
       }
       break;
     default:
